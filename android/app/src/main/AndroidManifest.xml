@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cbuggykart">
    <application
-        android:label="cbuggykart"
+        android:label="Buggy Kart"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

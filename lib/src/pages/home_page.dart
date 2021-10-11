@@ -1,3 +1,4 @@
+// import 'package:cbuggykart/src/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -10,7 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  TextStyle _textTitle = TextStyle(fontSize: 40.0);
+  final TextStyle _textTitle = const TextStyle(fontSize: 40.0);
 
   @override
   Widget build(BuildContext context) {
@@ -33,16 +34,18 @@ class _HomePageState extends State<HomePage> {
             Text('Bienvenido', style: _textTitle,),
             const SizedBox(height: 40.0,),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
-              child: const Text('Comunidad del juego Buggy Kart donde puede compartir su experiencia', textAlign: TextAlign.center,)),
-            const SizedBox(height: 40.0,),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: const Text('Comunidad del juego Buggy Kart donde puede compartir su experiencia', textAlign: TextAlign.center, )),
+            const SizedBox(height: 60.0,),
             // ignore: deprecated_member_use
             FlatButton(
-              onPressed: (){},
+              onPressed: (){
+                showAboutDialog(context: context);
+              },
               color: Colors.red[600],
-              shape: StadiumBorder(),
-              padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
-              child: const Text('Empezar', style: TextStyle(color: Colors.white, fontSize: 30.0),), 
+              shape: const StadiumBorder(),
+              padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 30.0),
+              child: const Text('Empezar', style: TextStyle(color: Colors.white, fontSize: 20.0),), 
               ),
           ],
         ),
