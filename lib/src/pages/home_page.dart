@@ -1,4 +1,5 @@
 // import 'package:cbuggykart/src/pages/login_page.dart';
+import 'package:cbuggykart/src/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -40,7 +41,7 @@ class _HomePageState extends State<HomePage> {
             // ignore: deprecated_member_use
             FlatButton(
               onPressed: (){
-                showAboutDialog(context: context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
               },
               color: Colors.red[600],
               shape: const StadiumBorder(),
